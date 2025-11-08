@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "name": "Subscribe with valid email",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "email": "test@example.com"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Subscribe with invalid email",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "email": "invalid-email"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "Get all articles",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Like an article",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "article_id": 1
+      },
+      "expectedStatus": 200
+    }
+  ]
+}
